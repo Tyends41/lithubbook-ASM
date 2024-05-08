@@ -32,7 +32,7 @@ $sql = "INSERT INTO favorites (user_id, book_id) VALUES ('$user_id', '$book_id')
 
 try {
   if ($db->query($sql) === TRUE) {
-    echo "New record created successfully";
+    header('Location: ../../pages/book/books.php');
   } else {
     echo "Created failed";
   }

@@ -15,13 +15,14 @@ if (!$db) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+$sql = "INSERT INTO cart_items (cart_id, book_id) VALUES ('{$_GET['cart_id']}', '{$_GET['book_id']}')";
 
-$sql = "DELETE FROM cart_items WHERE cart_id = " . $_GET['cart_id'] . " AND book_id = " . $_GET['book_id'];
-
-
-// echo $sql;
-if ($db->query($sql) === TRUE) {
-    echo 'Deleted success';
-} else {
-    echo "Deleted failed";
+try {
+    if ($db->query($sql) === TRUE) {
+        header('Location: ../../pages/carts/all.php');
+    } else {
+        echo "Created failed";
+    }
+} catch (\Throwable $th) {
+    echo "fatal error";
 }

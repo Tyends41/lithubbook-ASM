@@ -31,10 +31,31 @@ $result = mysqli_query($db, "SELECT * FROM books");
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Lithub Book</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="books.php">Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../carts/all.php">Carts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../favorites/all.php">Favorites</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <h1>Books</h1>
   <div class="container">
-    <a href="add.php" class="btn btn-primary">Add new Book</a>
-    <a href="../carts/all.php" class="btn btn-primary">Cart</a>
+    <a class="btn btn-primary" href="add.php">Add new book</a>
     <table class="table">
       <thead>
         <tr>

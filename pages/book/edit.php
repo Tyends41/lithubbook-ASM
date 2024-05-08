@@ -2,7 +2,7 @@
 session_start(); // start a session
 
 if (!isset($_SESSION['user_id'])) {
-  header('Location: ../user/login.html'); // redirect to login page if $email is not in the session
+  header('Location: ../user/login.php'); // redirect to login page if $email is not in the session
   exit;
 }
 
