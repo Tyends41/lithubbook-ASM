@@ -15,7 +15,6 @@ function connectToDatabase()
   ];
   return new PDO($dsn, $user, $pass, $opt);
 }
-
 function login($email, $password)
 {
   $pdo = connectToDatabase();
@@ -31,9 +30,7 @@ function login($email, $password)
     return false;
   }
 }
-
 session_start(); // start the session
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $email = $_POST['email'];
   $password = $_POST['password'];

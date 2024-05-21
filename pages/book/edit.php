@@ -45,23 +45,39 @@ if (!$book) {
 
 <head>
   <title>Edit Book</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 
 <body>
-  <form method="post" action="../../services/book/update.php">
-    <input type="hidden" name="id" value="<?= htmlspecialchars($book['id']) ?>">
+  <h1>Edit Book</h1>
+  <div class="container">
+    <div class="row justfy-content-center">
+      <div class="col-lg-8">
+        <form method="post" action="../../services/book/update.php">
+          <input type="hidden" name="id" value="<?= htmlspecialchars($book['id']) ?>">
 
+          <div class="form-group">
+            <label>Title: </label>
+            <input type="text" class="form-control" name="title" value="<?= htmlspecialchars($book['title']) ?>"><br>
+          </div>
 
-    <label>Title: </label>
-    <input type="text" name="title" value="<?= htmlspecialchars($book['title']) ?>"><br>
+          <div class="form-group">
+            <label>Author </label>
+            <input type="text" class="form-control" name="author" value="<?= htmlspecialchars($book['author']) ?>"><br>
+          </div>
 
-    <label>Author </label>
-    <input type="text" name="author" value="<?= htmlspecialchars($book['author']) ?>"><br>
+          <div class="form-group">
+            <label>Price:</label>
+            <input type="number" class="form-control" name="price" value="<?= htmlspecialchars($book['price']) ?>"><br>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
-    <label>Price:</label>
-    <input type="number" name="price" value="<?= htmlspecialchars($book['price']) ?>"><br>
-    <input type="submit" value="Update">
-  </form>
 </body>
 
 </html>

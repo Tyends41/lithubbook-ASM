@@ -38,7 +38,7 @@ $result = mysqli_query($db, "SELECT * FROM favorites WHERE user_id = " . $_SESSI
 </head>
 
 <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="../book/books.php">Lithub Book</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -54,27 +54,28 @@ $result = mysqli_query($db, "SELECT * FROM favorites WHERE user_id = " . $_SESSI
       </div>
     </div>
   </nav>
+
   <h1>Favorites</h1>
   <div class='container'>
-  <table class='table'>
-    <tr>
-      <th scope="col">User ID</th>
-      <th scope="col">Book ID</th>
-      <th scope="col">Actions</th>
-    </tr>
-    <?php while ($row = mysqli_fetch_assoc($result)): ?>
+    <table class='table'>
       <tr>
-        <td><?php echo $row['user_id']; ?></td>
-        <td><?php echo $row['book_id']; ?></td>
-        <td>
-          <a href="../../services/favorites/remove.php?book_id=<?php echo $row['book_id'] ?>" class="btn btn-danger">
-            Remove
-          </a>
-        </td>
+        <th scope="col">User ID</th>
+        <th scope="col">Book ID</th>
+        <th scope="col">Actions</th>
       </tr>
-    <?php endwhile; ?>
-  </table>
-    </div>
+      <?php while ($row = mysqli_fetch_assoc($result)): ?>
+        <tr>
+          <td><?php echo $row['user_id']; ?></td>
+          <td><?php echo $row['book_id']; ?></td>
+          <td>
+            <a href="../../services/favorites/remove.php?book_id=<?php echo $row['book_id'] ?>" class="btn btn-danger">
+              Remove
+            </a>
+          </td>
+        </tr>
+      <?php endwhile; ?>
+    </table>
+  </div>
 </body>
 
 </html>

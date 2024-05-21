@@ -36,3 +36,4 @@ try {
 } catch (\Throwable $th) {
   echo "fatal error";
 }
+

@@ -25,3 +25,5 @@ if ($db->query($sql) === TRUE) {
 } else {
     echo "Deleted failed";
 }
+
+

@@ -14,7 +14,7 @@ if (!$db) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-// Select all books
+// Select all carts
 $result = mysqli_query($db, "SELECT * FROM carts");
 ?>
 
@@ -40,7 +40,7 @@ $result = mysqli_query($db, "SELECT * FROM carts");
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="books.php">Books</a>
+            <a class="nav-link" href="../book/books.php">Books</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="all.php">Carts</a>

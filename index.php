@@ -10,29 +10,24 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Lithub Book</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="pages/user/login.php">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/user/register.php">Register</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+
   <header class="bg-primary text-white text-center py-5 mb-5">
     <h1>Welcome to Lithub Book</h1>
     <p class="lead">A great place to share your thoughts on books.</p>
   </header>
+
+  <h1 class="text-center">Getting started</h1>
+  <div class="text-center">
+    <a href="pages/user/login.php" class="btn btn-primary text-center btn-lg">Login</a>
+  </div>
+  <div>
+    <h2 class="text-center">or</h2>
+  </div>
+  <div class="text-center">
+    <a href="pages/user/register.php" class="btn btn-primary text-center btn-lg">Register</a>
+  </div>
+
+
 
   <div class="container">
     <div class="row">
